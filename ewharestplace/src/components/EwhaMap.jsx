@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import buildings from "./buildings";
 
 const StyledMap = styled.div`
     height: 100vh;
@@ -10,6 +11,7 @@ const StyledMap = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
+    align-content: flex-start;
 `;
 
 const BuildingBtn = styled.button`
@@ -24,27 +26,16 @@ const BuildingBtn = styled.button`
     font-family: Ewha;
     color: white;
     margin: 10px;
+    &:hover{
+        background-color: #68ac7f;
+        color: black;
+    }
+    
 `;
 const EwhaMap = ()=>{
+   
     return <StyledMap>
-        <BuildingBtn>공학관</BuildingBtn>
-        <BuildingBtn>연구협력관</BuildingBtn>
-        <BuildingBtn>중앙도서관</BuildingBtn>
-        <BuildingBtn>종합과학관</BuildingBtn>
-        <BuildingBtn>교육관</BuildingBtn>
-        <BuildingBtn>포스코관</BuildingBtn>
-        <BuildingBtn>학관</BuildingBtn>
-        <BuildingBtn>헬렌관</BuildingBtn>
-        <BuildingBtn>약학관</BuildingBtn>
-        <BuildingBtn>학생문화관</BuildingBtn>
-        <BuildingBtn>국제교육관</BuildingBtn>
-        <BuildingBtn>신세계관</BuildingBtn>
-        <BuildingBtn>ECC</BuildingBtn>
-        <BuildingBtn>체육관</BuildingBtn>
-        <BuildingBtn>음악관</BuildingBtn>
-        <BuildingBtn>조형예술관</BuildingBtn>
-        <BuildingBtn>sk텔레콤관</BuildingBtn>
-        <BuildingBtn>생활환경관</BuildingBtn>
+        {buildings.map(({buildingName})=><BuildingBtn>{buildingName}</BuildingBtn>)}
 
     </StyledMap>;
 }

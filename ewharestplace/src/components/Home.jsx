@@ -3,12 +3,9 @@ import Title from "./Title";
 import NaviBuilding from "./NaviBuilding";
 import styled from "styled-components";
 import EwhaMap from "./EwhaMap";
+import GreenDiv from "./GreenDiv";
 
-const GreenDiv = styled.div`
-background-color: #1E4119;
-font-family: 'MaruBuri';
-`
-;
+
 const Home = ()=>{
     return(
         <GreenDiv>
