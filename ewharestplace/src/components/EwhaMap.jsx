@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import buildings from "./buildings";
+import { useNavigate } from 'react-router-dom';
 
 const StyledMap = styled.div`
     height: 100vh;
@@ -32,10 +33,23 @@ const BuildingBtn = styled.button`
     }
     
 `;
-const EwhaMap = ()=>{
-   
+const EwhaMap = (buildingName)=>{
+    const navigate = useNavigate();
+    const goToBuilding = (e)=>{
+        console.log(e.target.textContent);
+       if( e.target.textContent === "공학관")
+        navigate("/engineering");
+       if(e.target.textContent === "종합과학관")
+        navigate("/science");
+       if(e.target.textContent === "포스코관")
+        navigate("/posco");
+       if(e.target.textContent === "sk텔레콤관")
+        navigate("/sktelecom");
+    };
+    
     return <StyledMap>
-        {buildings.map(({buildingName})=><BuildingBtn>{buildingName}</BuildingBtn>)}
+        {buildings.map(({buildingName})=>
+        <BuildingBtn onClick={goToBuilding}>{buildingName}</BuildingBtn>)}
 
     </StyledMap>;
 }

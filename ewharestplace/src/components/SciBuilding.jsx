@@ -3,11 +3,11 @@ import Title from "./Title";
 import GreenDiv from "./GreenDiv";
 import styled from "styled-components";
 import * as  TwoPage from "./TwoPageStyle"; 
-
+import { useNavigate } from 'react-router-dom';
 
 
 const SciBuilding = ()=>{
-    
+    const navigate = useNavigate();
     const [reviewNum, setReviewNum] = useState(0);
     const [oneReivew, setOneReview] = useState('현재 작성된 리뷰가 없습니다.');
     const restPlaces = [
@@ -18,7 +18,7 @@ const SciBuilding = ()=>{
     return (
         <GreenDiv>
             <Title />
-            <TwoPage.BackScreenBtn>&lt; 이전 화면으로</TwoPage.BackScreenBtn>
+            <TwoPage.BackScreenBtn onClick={()=>navigate("/")}>&lt; 이전 화면으로</TwoPage.BackScreenBtn>
             {
                 restPlaces.map((restPlace)=>(
                     <div key = {restPlace.name}>
