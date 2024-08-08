@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const StyledContainer = styled.div`
@@ -37,11 +38,15 @@ const WhiteHr = styled.hr`
 `;
 
 const Title = ()=>{
+    const navigate = useNavigate();
+    const goToHome = ()=>{
+        navigate("/");
+    };
     return(
         <div> 
         <StyledContainer>
-            <StyledLogo>EW<br/><PaleGreen>HU</PaleGreen></StyledLogo>
-            <Explain>이화여대<br />휴식공간 찾기</Explain>
+            <StyledLogo onClick={goToHome}>EW<br/><PaleGreen>HU</PaleGreen></StyledLogo>
+            <Explain onClick={goToHome}>이화여대<br />휴식공간 찾기</Explain>
            
         </StyledContainer>
         <WhiteHr/>

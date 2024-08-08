@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import styled from "styled-components";
 import buildings from "./buildings";
+import { useNavigate } from "react-router-dom";
 
 
 const SearchBar = styled.div`
@@ -42,8 +43,16 @@ const NaviBuilding = ()=>{
     const onChange = (e)=>{
         setQuery(e.target.value);
     };
-
-
+    const navigate = useNavigate();
+    const goToBuilding = (e)=>{
+        console.log(e.target.textContent);
+       if( e.target.textContent === "공학관")
+        navigate("/engineering");
+       if(e.target.textContent === "종합과학관")
+        navigate("/science");
+       if(e.target.textContent === "포스코관")
+        navigate("/posco");
+    };
  
     return (
         <SearchBar>
@@ -60,7 +69,7 @@ const NaviBuilding = ()=>{
             {query && filterBuilding.length > 0 && (
                     <div>
                         {filterBuilding.map(building => (
-                            <div key={building.buildingName}>{building.buildingName}</div>
+                            <div key={building.buildingName} onClick={goToBuilding}>{building.buildingName}</div>
                         ))}
             </div>)}
             </div>
