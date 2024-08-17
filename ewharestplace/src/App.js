@@ -6,6 +6,10 @@ import EngineerBuilding from "./components/EngineerBuilding";
 import PoscoBuilding from "./components/PoscoBuilding";
 import SciBuilding from "./components/SciBuilding";
 import SktelecomBuilding from "./components/SktelecomBuilding";
+import HakGwanBuilding from "./components/HakGwanBuilding";
+import MusicBuilding from "./components/MusicBuilding";
+import JoyedaeBuilding from "./components/JoyedaeBuilding";
+import PharmBuilding from "./components/PharmBuilding";
 
 function App() {
   return (
@@ -16,6 +20,10 @@ function App() {
       <Route path="/posco" element={<PoscoBuilding />}></Route>
       <Route path="/science" element={<SciBuilding />}></Route>
       <Route path="/sktelecom" element={<SktelecomBuilding />}></Route>
+      <Route path="/hakgwan" element={<HakGwanBuilding />}></Route>
+      <Route path="/music" element={<MusicBuilding />}></Route>
+      <Route path="/joyedae" element={<JoyedaeBuilding />}></Route>
+      <Route path="/pharm" element={<PharmBuilding />}></Route>
     </Routes>
     </BrowserRouter>
     

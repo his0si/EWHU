@@ -45,6 +45,14 @@ const EwhaMap = (buildingName)=>{
         navigate("/posco");
        if(e.target.textContent === "sk텔레콤관")
         navigate("/sktelecom");
+       if(e.target.textContent === "학관")
+        navigate("/hakgwan");
+       if(e.target.textContent === "조형예술관")
+        navigate("/joyedae");
+       if(e.target.textContent === "약학관")
+        navigate("/pharm");
+       if(e.target.textContent === "음악관")
+        navigate("/music");
     };
     
     return <StyledMap>
