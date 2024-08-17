@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'EwhaFont';
+  src: url('../fonts/이화체.ttf') format('truetype');
+}
+
+.card {
+  background-color: #BFBFBF;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  position: relative;
+  font-family: 'EwhaFont', sans-serif;
+}
+
+.card h2 {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.card p {
+  margin: 5px 0;
+}
+
+.card button {
+  background-color: #4A7C59;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.card button:hover {
+  background-color: #3B6B48;
+}
+
+.details {
+  margin-top: 10px;
+}
