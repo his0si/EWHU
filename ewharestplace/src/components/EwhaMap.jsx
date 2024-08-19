@@ -53,6 +53,26 @@ const EwhaMap = (buildingName)=>{
         navigate("/pharm");
        if(e.target.textContent === "음악관")
         navigate("/music");
+       if(e.target.textContent === "학생문화관")
+        navigate("/hakmun");
+       if(e.target.textContent === "교육관")
+        navigate("/edu");
+       if(e.target.textContent === "국제교육관")
+        navigate("/international");
+       if(e.target.textContent === "신세계관")
+        navigate("/newworld");
+       if(e.target.textContent === "연구협력관")
+        navigate("/yeonhyeop");
+       if(e.target.textContent === "체육관")
+        navigate("/gym");
+       if(e.target.textContent === "헬렌관")
+        navigate("/helen");
+       if(e.target.textContent === "ECC")
+        navigate("/ecc");
+       if(e.target.textContent === "연구협력관")
+        navigate("/yeonhyeop");
+       if(e.target.textContent === "생활환경관")
+        navigate("/human-ecology-building");
     };
     
     return <StyledMap>
