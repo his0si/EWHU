@@ -11,19 +11,9 @@ function AppYeonhyeop() {
       <HeaderYeonhyeop />
       <div className="card-container">
         <Card 
-          title="연협휴식공간1" 
-          location="연구협력관 1층" 
-          rating="★ 4.3" 
-          detailsVisible={detailsVisible}
-          setDetailsVisible={setDetailsVisible}
+          title="휴식공간 정보 없음" 
         />
-        <Card 
-          title="연협휴식공간2" 
-          location="연구협력관 1층" 
-          rating="★ 3.8" 
-          detailsVisible={detailsVisible}
-          setDetailsVisible={setDetailsVisible}
-        />
+        
       </div>
     </div>
   );
