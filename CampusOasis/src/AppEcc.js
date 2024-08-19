@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import HeaderECC from './components/HeaderECC';
+import HeaderEcc from './components/HeaderEcc';
 import Card from './components/Card';
 import './App.css';
 
-function AppECC() {
+function AppEcc() {
   const [detailsVisible, setDetailsVisible] = useState(false);
 
   return (
@@ -64,4 +64,4 @@ function AppECC() {
   );
 }
 
-export default AppECC;
+export default AppEcc;

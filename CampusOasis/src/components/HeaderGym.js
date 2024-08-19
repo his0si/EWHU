@@ -1,5 +1,5 @@
 import React from 'react';
-import './HeaderGym.css';
+import './HeaderGym';
 
 function HeaderGym() {
   return (
