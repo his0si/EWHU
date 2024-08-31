@@ -19,6 +19,7 @@ import AppGym from "./AppGym";
 import AppEcc from "./AppEcc";
 import AppHelen from "./AppHelen";
 import AppHumanEcologyBuilding from "./AppHumanEcologyBuilding";
+import Review from "./components/Review";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
       <Route path="/helen" element={<AppHelen />}></Route>
       <Route path="/ecc" element={<AppEcc />}></Route>
       <Route path="/human-ecology-building" element={<AppHumanEcologyBuilding />}></Route>
+      <Route path="/review" element={<Review />}></Route>
 
 
     </Routes>
